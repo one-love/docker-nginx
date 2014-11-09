@@ -1,11 +1,14 @@
 upstream uwsgicluster {
-{{range getvs "/upstream/*"}}
-    server {{.}};
+{{range service "api"}}
+    server {{.Address}}:{{.Port}};
 {{end}}
 }
 
 server {
     listen 80;
+
+    error_log /var/log/nginx.log warn;
+    access_log /var/log/nginx.log combined;
 
     location /static {
         alias /static/;
