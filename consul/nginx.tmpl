@@ -1,5 +1,5 @@
 upstream uwsgicluster {
-{{range service "api"}}
+{{range service "api-9000"}}
     server {{.Address}}:{{.Port}};
 {{end}}
 }
