@@ -6,6 +6,15 @@ upstream uwsgicluster {
 
 server {
     listen 80;
+    return 301 https://$http_host$request_uri;
+}
+
+server {
+    listen 443;
+
+    ssl on;
+    ssl_certificate /etc/nginx/ssl/onelove.crt;
+    ssl_certificate_key /etc/nginx/ssl/onelove.key;
 
     error_log /var/log/nginx.log warn;
     access_log /var/log/nginx.log combined;
