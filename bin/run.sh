@@ -2,7 +2,7 @@
 
 set -e
 
-export COMMAND="/opt/bin/consul-template -config /etc/nginx/consul/nginx.conf"
+export COMMAND="/opt/bin/consul-template -config /app/consul/nginx.conf"
 
 rm -rf /etc/nginx/conf.d/*
 echo -n "Waiting for initial config "
