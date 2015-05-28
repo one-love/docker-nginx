@@ -11,4 +11,7 @@ until $COMMAND -once; do
 done
 echo " done"
 
-$COMMAND
+while true; do
+    $COMMAND
+    sleep 1
+done
