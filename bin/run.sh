@@ -11,4 +11,4 @@ until $COMMAND -once; do
 done
 echo " done"
 
-$COMMAND &
+$COMMAND
