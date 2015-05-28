@@ -15,6 +15,7 @@ pip install -r requirements.txt
 mkdir /static
 python manage.py collectstatic --noinput
 
+# Get consul-template
 wget https://github.com/hashicorp/consul-template/releases/download/v0.9.0/consul-template_0.9.0_linux_amd64.tar.gz -O /tmp/consul-template.tar.gz
 cd /tmp
 tar xfvp consul-template.tar.gz
