@@ -8,8 +8,8 @@ apt-get update -y
 apt-get upgrade -y
 apt-get install -y $PACKAGES
 
-git clone https://github.com/one-love/api.git
-cd api
+git clone https://github.com/one-love/backend.git
+cd backend
 mv /app/__init__.py project/settings
 pip install -r requirements.txt
 mkdir /static
@@ -23,7 +23,7 @@ mv consul-template*/consul-template /bin
 
 echo "Cleanup"
 cd ..
-rm -rf /usr/local api
+rm -rf /usr/local backend
 apt-get purge -y $PACKAGES
 apt-get autoremove -y --purge
 apt-get clean -y
